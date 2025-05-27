@@ -1,13 +1,19 @@
-# Proyecto Spring Boot - Backend Rent Car
-
-## Descripción
-
-Este es el backend del proyecto Rent Car, desarrollado con Spring Boot 3.5 y Java 21.
-Utiliza MySQL como base de datos y está diseñado para funcionar como un microservicio RESTful, gestionando la lógica del alquiler de vehículos.
+# 🚗 Proyecto **Acceleraite** - Backend (Spring Boot)
 
 ---
 
-## Tecnologías utilizadas
+## 📖 Descripción
+
+Este es el backend del proyecto **Rent Car**, desarrollado con **Spring Boot 3.5** y **Java 21**.  
+Utiliza **MySQL** como base de datos y está diseñado como un microservicio RESTful para gestionar la lógica de alquiler de vehículos.
+
+---
+
+## 🚀 Tecnologías utilizadas
+
+<p align="center">
+  <img src="https://spring.io/images/projects/spring-boot-7f88b90f787e13b06db0118a2c109cc3.svg" alt="Spring Boot" width="120"/>
+</p>
 
 - Java 21
 - Spring Boot 3.5
@@ -19,15 +25,15 @@ Utiliza MySQL como base de datos y está diseñado para funcionar como un micros
 
 ---
 
-## Requisitos
+## 🛠 Requisitos previos
 
 - Java 21 instalado
 - Maven instalado
-- MySQL en ejecución y configurado con la base de datos correspondiente
+- MySQL en ejecución y configurado
 
 ---
 
-## Configuración del proyecto
+## ⚙️ Configuración del proyecto
 
 1. Clonar el repositorio
 ```bash
