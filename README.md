@@ -12,7 +12,7 @@ Utiliza **MySQL** como base de datos y está diseñado como un microservicio RES
 ## 🚀 Tecnologías utilizadas
 
 <p align="center">
-  <img src="https://spring.io/images/projects/spring-boot-7f88b90f787e13b06db0118a2c109cc3.svg" alt="Spring Boot" width="120"/>
+  <img src="https://miro.medium.com/v2/resize:fit:1200/1*gxXLMIuJDHCH7fwIgEP1cg.png" alt="Spring Boot" width="120"/>
 </p>
 
 - Java 21
