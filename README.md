@@ -31,5 +31,4 @@ Utiliza MySQL como base de datos y está diseñado para funcionar como un micros
 
 1. Clonar el repositorio
 ```bash
-git clone https://github.com/tu-usuario/tu-repo-backend.git
-v
+git clone https://github.com/Ericksosa/Acceleraite-Backend.git
