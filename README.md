@@ -38,3 +38,13 @@ Utiliza **MySQL** como base de datos y está diseñado como un microservicio RES
 1. Clonar el repositorio
 ```bash
 git clone https://github.com/Ericksosa/Acceleraite-Backend.git
+```
+2. Cambiar credenciales MySQL.
+
+Navegar al archivo application.properties dentro de la carpeta resources.
+```declarative
+Modificar las lineas, por tus credenciales propias de MySQL:
+
+spring.datasource.username=NombreUsuario
+spring.datasource.password=Contraseña
+```
