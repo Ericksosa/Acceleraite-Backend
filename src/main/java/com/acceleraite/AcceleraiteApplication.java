@@ -9,5 +9,4 @@ public class AcceleraiteApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AcceleraiteApplication.class, args);
 	}
-
 }

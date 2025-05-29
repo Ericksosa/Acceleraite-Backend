@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = TablaNombre.Empleado)
@@ -39,12 +40,19 @@ public class Empleado {
     @Column(name = TablaNombre.FechaIngreso)
     private Date FechaIngreso;
 
-    @OneToOne
-    @JoinColumn(name = "UsuarioId", foreignKey = @ForeignKey(name = "usuario_id"), unique = true)
+    // Relaciones de mappeo por otras tablas
+    @OneToMany(mappedBy = "empleado", cascade = CascadeType.ALL)
+    private List<Reserva> reservas;
+
+    @OneToMany(mappedBy = "empleado", cascade = CascadeType.ALL)
+    private List<Inspeccion> inspeccion;
+
+    // Relaciones de toma de atributos de otras tablas
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "UsuarioId", foreignKey = @ForeignKey(name = "empleado_usuario_id"), unique = true)
     private Usuario usuario;
 
-    @OneToOne
-    @JoinColumn(name = "EstadoId",foreignKey = @ForeignKey(name = "estado_id"))
+    @ManyToOne
+    @JoinColumn(name = "EstadoId",foreignKey = @ForeignKey(name = "empleado_estado_id"))
     private Estado estado;
-
 }

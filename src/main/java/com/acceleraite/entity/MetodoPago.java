@@ -7,33 +7,29 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 @Entity
-@Table(name = TablaNombre.Rol)
+@Table(name = TablaNombre.MetodoPago)
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class Rol {
+public class MetodoPago {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
     @Column(name = TablaNombre.Nombre)
     private String Nombre;
 
-    @Column(name = TablaNombre.FechaRegistro)
-    private Date FechaRegistro;
-
     @Column(name = TablaNombre.Descripcion)
     private String Descripcion;
 
-    // Reserva
-    @OneToMany(mappedBy = "rol", cascade = CascadeType.ALL)
-    private List<Usuario> usuarios = new ArrayList<>();
+    // Relaciones de mappeo por otras tablas
 
+
+    // Relaciones de toma de atributos de otras tablas
+    @ManyToOne
+    @JoinColumn(name = "EstadoId", foreignKey = @ForeignKey(name = "metodoPago_estado_id"))
+    private Estado estado;
 }

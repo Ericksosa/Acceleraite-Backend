@@ -7,17 +7,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = TablaNombre.Rol)
+@Table(name = TablaNombre.RedPago)
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class Rol {
+public class RedPago {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,14 +24,15 @@ public class Rol {
     @Column(name = TablaNombre.Nombre)
     private String Nombre;
 
-    @Column(name = TablaNombre.FechaRegistro)
-    private Date FechaRegistro;
-
     @Column(name = TablaNombre.Descripcion)
     private String Descripcion;
 
-    // Reserva
-    @OneToMany(mappedBy = "rol", cascade = CascadeType.ALL)
-    private List<Usuario> usuarios = new ArrayList<>();
+    // Relaciones de mappeo por otras tablas
+    @OneToMany(mappedBy = "redPago", cascade = CascadeType.ALL)
+    private List<Pago> pagos;
 
+    // Relaciones de toma de atributos de otras tablas
+    @ManyToOne
+    @JoinColumn(name = "EstadoId", foreignKey = @ForeignKey(name = "redpago_estado_id"))
+    private Estado estado;
 }

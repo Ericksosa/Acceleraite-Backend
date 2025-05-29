@@ -7,8 +7,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
-@Table(name = "Usuario")
+@Table(name = TablaNombre.Usuario)
 @Getter
 @Setter
 @NoArgsConstructor
@@ -28,10 +30,12 @@ public class Usuario {
     @Column(name = TablaNombre.Password)
     private String Password;
 
-    @ManyToOne
-    @JoinColumn(name = "RolId", foreignKey = @ForeignKey(name = "rol_id"), nullable = false)
-    private Rol rol;
+    // Relaciones de mappeo por otras tablas
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+    private List<Reserva> reservas;
 
-    @OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL)
-    private Empleado empleado;
+    // Relaciones de toma de atributos de otras tablas
+    @ManyToOne
+    @JoinColumn(name = "RolId", foreignKey = @ForeignKey(name = "usuario_rol_id"), nullable = false)
+    private Rol rol;
 }

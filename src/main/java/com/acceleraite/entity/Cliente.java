@@ -7,8 +7,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
-@Table(name = "Cliente")
+@Table(name = TablaNombre.Cliente)
 @Getter
 @Setter
 @NoArgsConstructor
@@ -33,6 +35,22 @@ public class Cliente {
 
     @Column(name = TablaNombre.TipoPersona)
     private String TipoPersona;
+
+    // Relaciones de mappeo por otras tablas
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+    private List<Calificacion> calificacion;
+
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+    private List<Opinion> opinion;
+
+    // Relaciones de toma de atributos de otras tablas
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "UsuarioId", foreignKey = @ForeignKey(name = "cliente_usuario_id"), unique = true)
+    private Usuario usuario;
+
+    @ManyToOne
+    @JoinColumn(name = "EstadoId",foreignKey = @ForeignKey(name = "cliente_estado_id"))
+    private Estado estado;
 
 
 }
