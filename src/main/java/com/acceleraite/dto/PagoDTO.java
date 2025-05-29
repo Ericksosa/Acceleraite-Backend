@@ -1,0 +1,29 @@
+package com.acceleraite.dto;
+
+import com.acceleraite.util.TablaNombre;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.Date;
+
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+public class PagoDTO {
+
+    private Long Id;
+    private String MontoAPagar;
+    private Long NoTarjeta;
+    private Date FechaVencimientoTarjeta;
+    private int CVV;
+    private String OwnerNombreTarjeta;
+    private Long RedPagoId;
+    private Long ReservaId;
+    private Long EstadoId;
+
+}
