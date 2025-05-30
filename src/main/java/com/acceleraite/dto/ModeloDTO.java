@@ -1,7 +1,5 @@
 package com.acceleraite.dto;
 
-import com.acceleraite.entity.Estado;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

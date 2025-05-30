@@ -1,11 +1,5 @@
 package com.acceleraite.dto;
 
-import com.acceleraite.entity.CantidadCombustible;
-import com.acceleraite.entity.Empleado;
-import com.acceleraite.entity.Estado;
-import com.acceleraite.entity.EstadoGoma;
-import com.acceleraite.util.TablaNombre;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
