@@ -2,17 +2,13 @@ package com.acceleraite.entity;
 
 import com.acceleraite.util.TablaNombre;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = TablaNombre.MetodoPago)
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
+@Data
 public class MetodoPago {
 
     @Id
@@ -26,7 +22,8 @@ public class MetodoPago {
     private String Descripcion;
 
     // Relaciones de mappeo por otras tablas
-
+    @OneToMany(mappedBy = "metodoPago", cascade = CascadeType.ALL)
+    private List<Pago> pagos;
 
     // Relaciones de toma de atributos de otras tablas
     @ManyToOne

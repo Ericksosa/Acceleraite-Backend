@@ -2,19 +2,13 @@ package com.acceleraite.entity;
 
 import com.acceleraite.util.TablaNombre;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Date;
 
 @Entity
 @Table(name = TablaNombre.Calificacion)
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
+@Data
 public class Calificacion {
 
     @Id
@@ -35,4 +29,8 @@ public class Calificacion {
     @ManyToOne
     @JoinColumn(name = "VehiculoId", foreignKey = @ForeignKey(name = "calificacion_vehiculo_id"))
     private Vehiculo vehiculo;
+
+    @ManyToOne
+    @JoinColumn(name = "EstadoId", foreignKey = @ForeignKey(name = "calificacion_estado_id"))
+    private Estado estado;
 }

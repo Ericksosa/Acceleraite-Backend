@@ -1,9 +1,11 @@
 package com.acceleraite.service.impl;
 
 import com.acceleraite.dto.RolDTO;
+import com.acceleraite.entity.Estado;
 import com.acceleraite.entity.Rol;
 import com.acceleraite.entity.Usuario;
 import com.acceleraite.mapper.RolMapper;
+import com.acceleraite.repository.EstadoRepository;
 import com.acceleraite.repository.RolRepository;
 import com.acceleraite.repository.UsuarioRepository;
 import com.acceleraite.service.RolService;
@@ -25,6 +27,9 @@ public class RolServiceImp implements RolService {
 
     @Autowired
     private UsuarioRepository usuarioRepository;
+
+    @Autowired
+    private EstadoRepository estadoRepository;
 
     @Override
     public RolDTO createRol(RolDTO rolDTO){
@@ -71,11 +76,15 @@ public class RolServiceImp implements RolService {
     }
 
     @Override
-    public void deleteRol(Long rolId) {
+    public void deleteRol(Long rolId, Long nuevoEstadoId) {
         Rol rol = rolRepository.findById(rolId)
                 .orElseThrow(() -> new ResolutionException("No se encontro el Rol con el ID: " + rolId));
-        rolRepository.deleteById(rolId);
-    }
 
+        Estado nuevoEstado = estadoRepository.findById(nuevoEstadoId)
+                .orElseThrow(() -> new ResolutionException("No se encontre el estado con el Id" + nuevoEstadoId));
+
+        rol.setEstado(nuevoEstado);
+        rolRepository.save(rol);
+    }
 
 }

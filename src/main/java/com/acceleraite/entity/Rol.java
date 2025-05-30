@@ -32,45 +32,9 @@ public class Rol {
     @OneToMany(mappedBy = "rol", cascade = CascadeType.ALL)
     private List<Usuario> usuarios = new ArrayList<>();
 
-    // Getter y Setters
+    // Relacion de toma de atributos
+    @ManyToOne
+    @JoinColumn(name = "EstadoId", foreignKey = @ForeignKey(name = "rol_estado_id"))
+    private Estado estado;
 
-//    public Long getId() {
-//        return Id;
-//    }
-//
-//    public void setId(Long id) {
-//        Id = id;
-//    }
-//
-//    public String getNombre() {
-//        return Nombre;
-//    }
-//
-//    public void setNombre(String nombre) {
-//        Nombre = nombre;
-//    }
-//
-//    public LocalDateTime getFechaRegistro() {
-//        return FechaRegistro;
-//    }
-//
-//    public void setFechaRegistro(LocalDateTime fechaRegistro) {
-//        FechaRegistro = fechaRegistro;
-//    }
-//
-//    public String getDescripcion() {
-//        return Descripcion;
-//    }
-//
-//    public void setDescripcion(String descripcion) {
-//        Descripcion = descripcion;
-//    }
-//
-//    public List<Usuario> getUsuarios() {
-//        return usuarios;
-//    }
-//
-//    public void setUsuarios(List<Usuario> usuarios) {
-//        this.usuarios = usuarios;
-//    }
 }

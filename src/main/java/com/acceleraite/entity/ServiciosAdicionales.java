@@ -2,19 +2,13 @@ package com.acceleraite.entity;
 
 import com.acceleraite.util.TablaNombre;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
 @Entity
 @Table(name = TablaNombre.ServiciosAdicionales)
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
+@Data
 public class ServiciosAdicionales {
 
     @Id
@@ -35,4 +29,8 @@ public class ServiciosAdicionales {
     // Relaciones de toma de atributos de otras tablas
     @OneToMany(mappedBy = "serviciosAdicionales", cascade = CascadeType.ALL)
     private List<ReservaServicio> reservaServicios;
+
+    @ManyToOne
+    @JoinColumn(name = "EstadoId", foreignKey = @ForeignKey(name = "serviciosAdicionales_estado_id"))
+    private Estado estado;
 }

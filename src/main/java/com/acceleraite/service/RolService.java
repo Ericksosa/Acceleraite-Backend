@@ -18,6 +18,6 @@ public interface RolService {
     RolDTO updateRolById(Long rolId, RolDTO updateRol);
 
     //Delete
-    void deleteRol(Long rolId);
+    void deleteRol(Long rolId, Long nuevoEstadoId);
 
 }

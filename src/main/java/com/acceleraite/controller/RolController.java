@@ -54,11 +54,12 @@ public class RolController {
         return ResponseEntity.ok(rolDTO);
     }
 
-    // Build Delete REST API
-    @DeleteMapping("{id}")
-    public ResponseEntity <String> deleteRol (@PathVariable("id") Long rolId){
-        rolService.deleteRol(rolId);
-        return ResponseEntity.ok("Rol eliminado correctamente!. "); // Primera fase de delete
+    // Build Delete REST API (CambioDeEstado)
+    @PutMapping("/{id}/estado/{estadoId}")
+    public ResponseEntity <String> deleteRol (@PathVariable("id") Long rolId,
+                                              @PathVariable("estadoId") Long estadoId){
+        rolService.deleteRol(rolId, estadoId);
+        return ResponseEntity.ok("Rol eliminado correctamente!. ");
     }
 
 }

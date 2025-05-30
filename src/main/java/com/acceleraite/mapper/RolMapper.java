@@ -1,6 +1,7 @@
 package com.acceleraite.mapper;
 
 import com.acceleraite.dto.RolDTO;
+import com.acceleraite.entity.Estado;
 import com.acceleraite.entity.Rol;
 import com.acceleraite.entity.Usuario;
 
@@ -22,6 +23,7 @@ public class RolMapper {
         rolDTO.setDescripcion(rol.getDescripcion());
         rolDTO.setFechaRegistro(rol.getFechaRegistro());
         rolDTO.setUsuariosIds(usuariosIds);
+        rolDTO.setEstadoId(rol.getEstado().getId());
 
         return rolDTO;
     }
@@ -33,6 +35,12 @@ public class RolMapper {
         rol.setDescripcion(rolDTO.getDescripcion());
         rol.setFechaRegistro(LocalDateTime.now());
         rol.setUsuarios(usuariosRelacionados);
+
+        if(rolDTO.getEstadoId() != null){
+            Estado estado = new Estado();
+            estado.setId(rolDTO.getEstadoId());
+            rol.setEstado(estado);
+        }
         return rol;
     }
 }

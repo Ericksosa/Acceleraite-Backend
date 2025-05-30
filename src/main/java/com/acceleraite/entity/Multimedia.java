@@ -2,17 +2,11 @@ package com.acceleraite.entity;
 
 import com.acceleraite.util.TablaNombre;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table(name = TablaNombre.Multimedia)
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
+@Data
 public class Multimedia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,4 +26,9 @@ public class Multimedia {
     @ManyToOne
     @JoinColumn(name = "vehiculoId", foreignKey = @ForeignKey(name = "multimedia_vehiculo_id"))
     private Vehiculo vehiculo;
+
+    @ManyToOne
+    @JoinColumn(name = "estadoId", foreignKey = @ForeignKey(name = "multimedia_estado_id"))
+    private Estado estado;
+
 }
