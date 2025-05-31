@@ -2,17 +2,11 @@ package com.acceleraite.entity;
 
 import com.acceleraite.util.TablaNombre;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table(name = TablaNombre.TipoVehiculo)
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
+@Data
 public class TipoVehiculo {
     @jakarta.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

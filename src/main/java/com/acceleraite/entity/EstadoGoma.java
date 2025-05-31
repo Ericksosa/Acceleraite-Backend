@@ -2,17 +2,11 @@ package com.acceleraite.entity;
 
 import com.acceleraite.util.TablaNombre;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table(name = TablaNombre.EstadoGoma)
-@AllArgsConstructor
-@NoArgsConstructor
-@Setter
-@Getter
+@Data
 public class EstadoGoma {
 
     @Id
@@ -31,5 +25,8 @@ public class EstadoGoma {
     private Inspeccion inspeccion;
 
     // Relaciones de toma de atributos de otras tablas
+    @ManyToOne
+    @JoinColumn(name = "EstadoId", foreignKey = @ForeignKey(name = "EstadoGoma_estado_id"))
+    private Estado estado;
 
 }

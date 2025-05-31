@@ -2,19 +2,13 @@ package com.acceleraite.entity;
 
 import com.acceleraite.util.TablaNombre;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
 @Entity
 @Table(name = TablaNombre.Marca)
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
+@Data
 public class Marca {
 
     @Id

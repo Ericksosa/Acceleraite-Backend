@@ -1,18 +1,11 @@
 package com.acceleraite.dto;
 
-import com.acceleraite.util.TablaNombre;
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+
+import lombok.*;
 
 import java.util.Date;
 
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
+@Data
 public class DevolucionDTO {
 
     private Long Id;
