@@ -1,9 +1,7 @@
 package com.acceleraite.controller;
 
 import com.acceleraite.dto.RolDTO;
-import com.acceleraite.entity.Usuario;
 import com.acceleraite.service.RolService;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

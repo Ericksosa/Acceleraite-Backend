@@ -8,7 +8,7 @@ import lombok.*;
 @Table(name = TablaNombre.TipoVehiculo)
 @Data
 public class TipoVehiculo {
-    @jakarta.persistence.Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long Id;
 
