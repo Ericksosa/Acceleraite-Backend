@@ -33,8 +33,8 @@ public class Usuario {
     @JoinColumn(name = "RolId", foreignKey = @ForeignKey(name = "usuario_rol_id"), nullable = false)
     private Rol rol;
 
-   @ManyToOne
-   @JoinColumn(name = "EstadoId", foreignKey = @ForeignKey(name = "usuario_estado_id"), nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "EstadoId", foreignKey = @ForeignKey(name = "usuario_estado_id"), nullable = false)
     private Estado estado;
 
 }

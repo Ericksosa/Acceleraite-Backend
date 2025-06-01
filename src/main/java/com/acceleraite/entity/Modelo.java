@@ -29,6 +29,4 @@ public class Modelo {
     @JoinColumn(name = "EstadoId",foreignKey = @ForeignKey(name = "modelo_estado_id"))
     private Estado estado;
 
-
-
 }

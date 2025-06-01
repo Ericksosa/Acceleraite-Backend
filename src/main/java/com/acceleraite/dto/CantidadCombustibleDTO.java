@@ -9,4 +9,5 @@ public class CantidadCombustibleDTO {
     private String Nombre;
     private String Descripcion;
     private Long InspeccionId;
+    private Long EstadoId;
 }

@@ -18,5 +18,4 @@ public class ClienteDTO {
     private Long UsuarioId;
     private Long EstadoId;
 
-
 }
