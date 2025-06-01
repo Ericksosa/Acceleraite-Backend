@@ -5,8 +5,9 @@ spring.datasource.url=jdbc:mysql://localhost:3306/AcceleraiteDb?createDatabaseIf
 spring.datasource.username=NombreUsuario
 spring.datasource.password=Contraseña
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.profiles.active=dev
 
-#Inicialización y JPA
+#InicializaciÃ³n y JPA
 spring.jpa.hibernate.ddl-auto=update
 spring.datasource.initialization-mode=always
 spring.jpa.show-sql=true

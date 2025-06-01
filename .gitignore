@@ -65,6 +65,7 @@ logs/
 
 # Spring Boot DevTools
 spring-boot-devtools.properties
+src/main/resources/application.properties
 
 # Compiled class files
 *.class
