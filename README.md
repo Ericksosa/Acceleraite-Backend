@@ -41,7 +41,10 @@ git clone https://github.com/Ericksosa/Acceleraite-Backend.git
 ```
 2. Cambiar credenciales MySQL.
 
-Navegar al archivo application.properties dentro de la carpeta resources.
+Navegar al archivo ```application.properties.example``` dentro de la carpeta ```resources```.
+Copiar y pegar el archivo ```application.properties.example``` y renombrarlo como ```application.properties```.
+
+
 ```declarative
 Modificar las lineas, por tus credenciales propias de MySQL:
 
