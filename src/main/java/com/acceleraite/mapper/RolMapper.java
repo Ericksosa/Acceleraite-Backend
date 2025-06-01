@@ -24,7 +24,6 @@ public class RolMapper {
         rolDTO.setFechaRegistro(rol.getFechaRegistro());
         rolDTO.setUsuariosIds(usuariosIds);
         rolDTO.setEstadoId(rol.getEstado().getId());
-
         return rolDTO;
     }
 

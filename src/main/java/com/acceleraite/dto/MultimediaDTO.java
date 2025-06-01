@@ -10,4 +10,5 @@ public class MultimediaDTO {
     private String Tipo;
     private byte[] Archivo;
     private Long VehiculoId;
+    private Long EstadoId;
 }

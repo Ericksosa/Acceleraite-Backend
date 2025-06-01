@@ -13,5 +13,4 @@ public class TipoCombustibleDTO {
     private List<Long> VehiculoIds;
     private Long EstadoId;
 
-
 }

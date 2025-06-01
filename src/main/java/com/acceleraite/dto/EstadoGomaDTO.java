@@ -9,5 +9,6 @@ public class EstadoGomaDTO {
     private String Nombre;
     private String Descripciom;
     private Long InspeccionId;
+    private Long EstadoId;
 
 }

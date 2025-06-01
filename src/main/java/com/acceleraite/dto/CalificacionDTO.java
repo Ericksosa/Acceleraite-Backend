@@ -13,5 +13,6 @@ public class CalificacionDTO {
     private Date Fecha;
     private Long ClienteId;
     private Long VehiculoId;
+    private Long EstadoId;
 
 }

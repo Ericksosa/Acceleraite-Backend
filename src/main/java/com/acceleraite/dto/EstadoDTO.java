@@ -24,5 +24,13 @@ public class EstadoDTO {
     private List<Long> InspeccionesIds;
     private List<Long> MensajesLogsIds;
     private List<Long> RentasIds;
+    private List<Long> RolesIds;
+    private List<Long> UsuariosIds;
+    private List<Long> CalificacionesIds;
+    private List<Long> OpinionesIds;
+    private List<Long> MultimediaIds;
+    private List<Long> EstadoGomasIds;
+    private List<Long> CantidadCombustibleIds;
+    private List<Long> ServiciosAdicionalesIds;
 
 }

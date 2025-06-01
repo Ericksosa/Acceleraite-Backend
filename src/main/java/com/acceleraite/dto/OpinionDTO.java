@@ -13,5 +13,6 @@ public class OpinionDTO {
     private Date Fecha;
     private Long ClienteId;
     private Long VehiculoId;
+    private Long EstadoId;
 
 }

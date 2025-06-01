@@ -12,6 +12,6 @@ public class UsuarioDTO {
     private String NombreUsuario;
     private String Correo;
     private String Password;
-    private List<Long> ReservasIds;
     private Long RolId;
+    private Long EstadoId;
 }

@@ -23,7 +23,7 @@ public class TipoVehiculoController {
     }
 
     // BUILD REST API GET BY ID
-    @GetMapping
+    @GetMapping("{id}")
     public ResponseEntity<TipoVehiculoDTO> getTipoVehiculoById(@PathVariable("id") Long TipoVehiculoId){
         TipoVehiculoDTO tipoVehiculoDTO = tipoVehiculoService.getTipoVehiculoByID(TipoVehiculoId);
         return ResponseEntity.ok(tipoVehiculoDTO);
@@ -39,18 +39,24 @@ public class TipoVehiculoController {
     // BUILD REST API CREATE
     @PostMapping
     public ResponseEntity<TipoVehiculoDTO> createTipoVehiculo(@RequestBody TipoVehiculoDTO tipoVehiculoDTO){
-        TipoVehiculoDTO saveTipoVehiculoDTO = tipoVehiculoService.createTipoVehiculo(tipoVehiculoDTO);
-        return new ResponseEntity<>(tipoVehiculoDTO, HttpStatus.CREATED);
+        TipoVehiculoDTO saveTipoVehiculo = tipoVehiculoService.createTipoVehiculo(tipoVehiculoDTO);
+        return new ResponseEntity<>(saveTipoVehiculo, HttpStatus.CREATED);
     }
 
-    // BUILD REST API
-
+    // BUILD REST API UPDATE BY ID
     @PutMapping("{id}")
-    public ResponseEntity <TipoVehiculoDTO> updateTipoVehiculoById(@PathVariable Long tipoVehiculoId,
+    public ResponseEntity <TipoVehiculoDTO> updateTipoVehiculoById(@PathVariable ("id") Long tipoVehiculoId,
                                                                    @RequestBody TipoVehiculoDTO updateTipoVehiculo){
         TipoVehiculoDTO tipoVehiculoDTO = tipoVehiculoService.updateTipoVehiculoById(tipoVehiculoId, updateTipoVehiculo);
         return ResponseEntity.ok(tipoVehiculoDTO);
+    }
 
+    // BUILD REST API DELETE BY ID
+    @PutMapping("/{id}/estado/{estadoId}")
+    public ResponseEntity <String> deleteTipoVehiculo(@PathVariable("id") Long TipoVehiculoId,
+                                                      @PathVariable("estadoId") Long estadoId){
+        tipoVehiculoService.deleteTipoVehiculo(TipoVehiculoId, estadoId);
+        return ResponseEntity.ok("Tipo Vehiculo eliminado correctamente!. ");
     }
 
 }

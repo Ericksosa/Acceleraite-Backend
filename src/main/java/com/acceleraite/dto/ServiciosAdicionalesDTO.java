@@ -12,4 +12,5 @@ public class ServiciosAdicionalesDTO {
     private String Descripcion;
     private String Precio;
     private List<Long> ReservaServiciosIds;
+    private Long EstadoId;
 }

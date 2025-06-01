@@ -71,7 +71,7 @@ public class TipoVehiculoImp implements TipoVehiculoService {
                 .orElseThrow(() -> new ResourceNotFoundException("No se encontro el Tipo de Vehiculo con este ID: " + tipoVehiculoId));
 
         Estado estado = estadoRepository.findById(nuevoEstadoId)
-                        .orElseThrow(() -> new ResourceNotFoundException("No se encontre el Estado mediante el ID: " + nuevoEstadoId));
+                .orElseThrow(() -> new ResourceNotFoundException("No se encontre el Estado mediante el ID: " + nuevoEstadoId));
 
         tipoVehiculo.setEstado(estado);
         tipoVehiculoRepository.save(tipoVehiculo);

@@ -10,8 +10,8 @@ public class TipoVehiculoMapper {
         TipoVehiculoDTO tipoVehiculoDTO = new TipoVehiculoDTO();
         tipoVehiculoDTO.setId(tipoVehiculo.getId());
         tipoVehiculoDTO.setNombre(tipoVehiculo.getNombre());
-        tipoVehiculoDTO.setDescripcion(tipoVehiculoDTO.getDescripcion());
-        tipoVehiculoDTO.setEstadoId(tipoVehiculoDTO.getId());
+        tipoVehiculoDTO.setDescripcion(tipoVehiculo.getDescripcion());
+        tipoVehiculoDTO.setEstadoId(tipoVehiculo.getEstado().getId());
         return tipoVehiculoDTO;
     }
 
@@ -23,7 +23,7 @@ public class TipoVehiculoMapper {
 
         if(tipoVehiculoDTO.getEstadoId() != null){
             Estado estado = new Estado();
-            estado.setId(tipoVehiculo.getId());
+            estado.setId(tipoVehiculoDTO.getEstadoId());
             tipoVehiculo.setEstado(estado);
         }
         return tipoVehiculo;
