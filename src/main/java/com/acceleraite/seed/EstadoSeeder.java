@@ -8,10 +8,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class EstadoSeeder implements CommandLineRunner {
+
     private final EstadoRepository estadoRepository;
+
     public EstadoSeeder(EstadoRepository estadoRepository) {
         this.estadoRepository = estadoRepository;
     }
+
     @Override
     public void run(String... args) {
         if (estadoRepository.count() == 0) {
