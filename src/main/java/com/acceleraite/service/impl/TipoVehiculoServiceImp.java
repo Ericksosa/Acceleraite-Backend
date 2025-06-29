@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class TipoVehiculoImp implements TipoVehiculoService {
+public class TipoVehiculoServiceImp implements TipoVehiculoService {
 
     @Autowired
     private TipoVehiculoRepository tipoVehiculoRepository;
@@ -57,7 +57,7 @@ public class TipoVehiculoImp implements TipoVehiculoService {
 
         if(updateTipoVehiculo.getEstadoId() != null){
             Estado estado = new Estado();
-            estado.setId(updateTipoVehiculo.getId());
+            estado.setId(updateTipoVehiculo.getEstadoId());
             tipoVehiculo.setEstado(estado);
         }
 

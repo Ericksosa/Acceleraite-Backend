@@ -60,7 +60,7 @@ public class UsuarioServiceImp implements UsuarioService {
 
         if(updateUsuario.getRolId() != null){
             Rol rol = new Rol();
-            rol.setId(updateUsuario.getId());
+            rol.setId(updateUsuario.getRolId());
             usuario.setRol(rol);
         }
 
@@ -69,8 +69,8 @@ public class UsuarioServiceImp implements UsuarioService {
             estado.setId(updateUsuario.getEstadoId());
             usuario.setEstado(estado);
         }
-
-        return UsuarioMapper.mapToUsuarioDTO(usuario);
+        Usuario actualizoUsuario = usuarioRepository.save(usuario);
+        return UsuarioMapper.mapToUsuarioDTO(actualizoUsuario);
     }
 
     @Override

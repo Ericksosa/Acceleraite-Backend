@@ -13,12 +13,15 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/empleados")
 public class EmpleadoController {
+
     @Autowired
     private EmpleadoService empleadoService;
+
     @Autowired
     public EmpleadoController(EmpleadoService empleadoService) {
         this.empleadoService = empleadoService;
     }
+
     @GetMapping
     public ResponseEntity<List<EmpleadoDTO>> getAllEmpleados() {
         List<EmpleadoDTO> empleados = empleadoService.getAllEmpleados();
