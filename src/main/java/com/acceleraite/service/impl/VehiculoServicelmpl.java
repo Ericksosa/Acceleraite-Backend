@@ -4,10 +4,12 @@ package com.acceleraite.service.impl;
 import com.acceleraite.dto.EmpleadoDTO;
 import com.acceleraite.dto.VehiculoDTO;
 import com.acceleraite.entity.Empleado;
+import com.acceleraite.entity.TipoVehiculo;
 import com.acceleraite.entity.Vehiculo;
 import com.acceleraite.mapper.EmpleadoMapper;
 import com.acceleraite.mapper.VehiculoMapper;
 import com.acceleraite.repository.EstadoRepository;
+import com.acceleraite.repository.TipoVehiculoRepository;
 import com.acceleraite.repository.VehiculoRepository;
 import com.acceleraite.service.VehiculoService;
 import lombok.AllArgsConstructor;
@@ -25,6 +27,8 @@ public class VehiculoServicelmpl implements VehiculoService {
     private VehiculoRepository vehiculoRepository;
     @Autowired
     private EstadoRepository estadoRepository;
+    @Autowired
+    private TipoVehiculoRepository tipoVehiculoRepository;
 
     @Override
     public VehiculoDTO createVehiculo(VehiculoDTO vehiculoDTO){
@@ -70,6 +74,15 @@ public class VehiculoServicelmpl implements VehiculoService {
                     .orElseThrow(() -> new ResolutionException("No existe ningún vehiculo con el ID: " + updateVehiculo.getEstadoId())));
         } else {
             vehiculo.setEstado(null);
+        }
+
+        //TipoVehiculo
+        if (updateVehiculo.getTipoVehiculoId() != null) {
+            TipoVehiculo tipoVehiculo = tipoVehiculoRepository.findById(updateVehiculo.getTipoVehiculoId())
+                    .orElseThrow(() -> new ResolutionException("No existe ningún tipo de vehículo con el ID: " + updateVehiculo.getTipoVehiculoId()));
+            vehiculo.setTipoVehiculo(tipoVehiculo);
+        } else {
+            vehiculo.setTipoVehiculo(null);
         }
 
         Vehiculo updatedVehiculo = vehiculoRepository.save(vehiculo);
