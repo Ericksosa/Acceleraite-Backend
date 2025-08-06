@@ -4,6 +4,7 @@ package com.acceleraite.service.impl;
 import com.acceleraite.dto.EmpleadoDTO;
 import com.acceleraite.dto.VehiculoDTO;
 import com.acceleraite.entity.Empleado;
+import com.acceleraite.entity.Modelo;
 import com.acceleraite.entity.TipoVehiculo;
 import com.acceleraite.entity.Vehiculo;
 import com.acceleraite.mapper.EmpleadoMapper;
@@ -69,6 +70,11 @@ public class VehiculoServicelmpl implements VehiculoService {
         vehiculo.setNoPlaca(updateVehiculo.getNoPlaca());
         vehiculo.setColor(updateVehiculo.getColor());
 
+        if (updateVehiculo.getModeloId() != null){
+            Modelo modelo = new Modelo();
+            modelo.setId(updateVehiculo.getModeloId());
+            vehiculo.setModelo(modelo);
+        }
         if (updateVehiculo.getEstadoId() != null) {
             vehiculo.setEstado(estadoRepository.findById(updateVehiculo.getEstadoId())
                     .orElseThrow(() -> new ResolutionException("No existe ningún vehiculo con el ID: " + updateVehiculo.getEstadoId())));
