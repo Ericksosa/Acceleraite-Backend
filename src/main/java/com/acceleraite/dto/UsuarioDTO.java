@@ -1,17 +1,25 @@
 package com.acceleraite.dto;
 
-import lombok.*;
-
-import java.util.List;
-
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
 @Data
 public class UsuarioDTO {
 
-    private Long Id;
-    private String NombreUsuario;
-    private String Correo;
-    private String Password;
-    private Long RolId;
-    private Long EstadoId;
+    private Long id;
+
+//    @JsonProperty("NombreUsuario")
+    private String nombreUsuario;
+
+//    @JsonProperty("Correo")
+    private String correo;
+
+//    @JsonProperty("Password")
+    private String password;
+
+//    @JsonProperty("RolId")
+    private Long rolId;
+
+//    @JsonProperty("EstadoId")
+    private Long estadoId;
 }

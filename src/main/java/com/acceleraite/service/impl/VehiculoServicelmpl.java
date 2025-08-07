@@ -1,13 +1,10 @@
 package com.acceleraite.service.impl;
 
 
-import com.acceleraite.dto.EmpleadoDTO;
 import com.acceleraite.dto.VehiculoDTO;
-import com.acceleraite.entity.Empleado;
 import com.acceleraite.entity.Modelo;
 import com.acceleraite.entity.TipoVehiculo;
 import com.acceleraite.entity.Vehiculo;
-import com.acceleraite.mapper.EmpleadoMapper;
 import com.acceleraite.mapper.VehiculoMapper;
 import com.acceleraite.repository.EstadoRepository;
 import com.acceleraite.repository.TipoVehiculoRepository;

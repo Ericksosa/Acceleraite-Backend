@@ -30,6 +30,17 @@ public class UsuarioServiceImp implements UsuarioService {
     @Override
     public UsuarioDTO createUsuario(UsuarioDTO usuarioDTO) {
         Usuario usuario = UsuarioMapper.mapToUsuario(usuarioDTO);
+
+        // Asegúrate de cargar el Estado existente desde la base de datos
+        Estado estado = estadoRepository.findById(usuarioDTO.getEstadoId())
+                .orElseThrow(() -> new ResourceNotFoundException("No se encuentra el estado con el ID: " + usuarioDTO.getEstadoId()));
+        usuario.setEstado(estado);
+
+        // Asignar el Rol (puedes validar con un repositorio también si deseas)
+        Rol rol = new Rol();
+        rol.setId(usuarioDTO.getRolId());
+        usuario.setRol(rol);
+
         Usuario saveUsuario = usuarioRepository.save(usuario);
         return UsuarioMapper.mapToUsuarioDTO(saveUsuario);
     }
@@ -84,4 +95,13 @@ public class UsuarioServiceImp implements UsuarioService {
         usuario.setEstado(estado);
         usuarioRepository.save(usuario);
     }
+    @Override
+    public UsuarioDTO login(String correo, String password) {
+        Usuario usuario = usuarioRepository.findByEmailAndPassword(correo, password);
+        if (usuario != null) {
+            return UsuarioMapper.mapToUsuarioDTO(usuario);
+        }
+        return null;
+    }
+
 }
