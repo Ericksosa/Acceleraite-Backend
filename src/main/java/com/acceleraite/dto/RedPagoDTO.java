@@ -2,9 +2,6 @@ package com.acceleraite.dto;
 
 import lombok.*;
 
-import java.util.List;
-
-
 @Data
 public class RedPagoDTO {
 
