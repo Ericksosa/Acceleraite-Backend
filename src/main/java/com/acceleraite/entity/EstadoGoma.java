@@ -11,13 +11,13 @@ public class EstadoGoma {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long Id;
+    private Long id;
 
     @Column(name = TablaNombre.Nombre)
-    private String Nombre;
+    private String nombre;
 
     @Column(name = TablaNombre.Descripcion)
-    private String Descripciom;
+    private String descripciom;
 
     // Relaciones de mappeo por otras tablas
 

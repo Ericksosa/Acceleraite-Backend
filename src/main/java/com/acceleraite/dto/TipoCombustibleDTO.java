@@ -7,10 +7,11 @@ import java.util.List;
 @Data
 public class TipoCombustibleDTO {
 
-    private Long Id;
-    private String Nombre;
-    private String Descripcion;
-    private List<Long> VehiculoIds;
-    private Long EstadoId;
+    private Long id;
+    private String nombre;
+    private String descripcion;
+    private List<Long> vehiculoIds;
+    private Long estadoId;
+    private String estadoNombre;
 
 }

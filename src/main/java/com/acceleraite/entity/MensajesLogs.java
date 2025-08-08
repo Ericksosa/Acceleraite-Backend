@@ -11,13 +11,13 @@ public class MensajesLogs {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long Id;
+    private Long id;
 
     @Column(name = TablaNombre.Nombre)
-    private String Nombre;
+    private String nombre;
 
     @Column(name = TablaNombre.Descripcion)
-    private String Descripcion;
+    private String descripcion;
 
     // Relaciones de mappeo por otras tablas
 

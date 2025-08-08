@@ -13,19 +13,19 @@ public class Renta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
     @Column(name = TablaNombre.Descripcion)
-    private String Descripcion;
+    private String descripcion;
 
     @Column(name = TablaNombre.FechaInicio)
-    private Date FechaInicio;
+    private Date fechaInicio;
 
     @Column(name = TablaNombre.FechaVencimiento)
-    private Date FechaVencimiento;
+    private Date fechaVencimiento;
 
     @Column(name = TablaNombre.MillajeInicio)
-    private Long MillajeInicio;
+    private Long millajeInicio;
 
     // Relaciones de mappeo por otras tablas
 

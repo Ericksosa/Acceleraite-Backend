@@ -10,16 +10,13 @@ import lombok.*;
 public class TipoVehiculo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long Id;
+    private long id;
 
     @Column(name = TablaNombre.Nombre)
-    private String Nombre;
+    private String nombre;
 
     @Column(name = TablaNombre.Descripcion)
-    private String Descripcion;
-
-    // Relaciones de mappeo por otras tablas
-
+    private String descripcion;
 
     // Relaciones de toma de atributos de otras tablas
     @ManyToOne

@@ -13,16 +13,16 @@ public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
     @Column(name = TablaNombre.NombreUsuario)
-    private String NombreUsuario;
+    private String nombreUsuario;
 
     @Column(name = TablaNombre.Correo)
-    private String Correo;
+    private String correo;
 
     @Column(name = TablaNombre.Password)
-    private String Password;
+    private String password;
 
     // Relaciones de mappeo por otras tablas
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)

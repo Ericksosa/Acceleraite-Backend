@@ -17,22 +17,22 @@ public class Reserva {
     private Long id;
 
     @Column(name = TablaNombre.FechaCreacion)
-    private Date FechaCreacion;
+    private Date fechaCreacion;
 
     @Column(name = TablaNombre.FechaInicio)
-    private Date FechaInicio;
+    private Date fechaInicio;
 
     @Column(name = TablaNombre.MontoXDia)
-    private double Monto_X_Dia;
+    private double monto_X_Dia;
 
     @Column(name = TablaNombre.CantidadDia)
-    private double CantidadDia;
+    private double cantidadDia;
 
     @Column(name = TablaNombre.Comentario)
-    private String Comentario;
+    private String comentario;
 
     @Column(name = TablaNombre.MontoTotal)
-    private double MontoTotal;
+    private double montoTotal;
 
     // Relaciones de mappeo por otras tablas
     @OneToMany(mappedBy = "reserva", cascade = CascadeType.ALL)

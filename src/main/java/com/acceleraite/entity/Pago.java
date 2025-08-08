@@ -16,19 +16,19 @@ public class Pago {
     private Long id;
 
     @Column(name = TablaNombre.MontoAPagar)
-    private String MontoAPagar;
+    private String montoAPagar;
 
     @Column(name = TablaNombre.NoTarjeta)
-    private Long NoTarjeta;
+    private Long noTarjeta;
 
     @Column(name = TablaNombre.FechaVencimientoTarjeta)
-    private Date FechaVencimientoTarjeta;
+    private Date fechaVencimientoTarjeta;
 
     @Column(name = TablaNombre.CVV)
     private int CVV;
 
     @Column(name = TablaNombre.OwnerNombreTarjeta)
-    private String OwnerNombreTarjeta;
+    private String ownerNombreTarjeta;
 
 
     // Relaciones de mappeo por otras tablas

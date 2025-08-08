@@ -13,16 +13,16 @@ public class Devolucion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
     @Column(name = TablaNombre.Descripcion)
-    private String Descripcion;
+    private String descripcion;
 
     @Column(name = TablaNombre.FechaDevolucion)
-    private Date FechaDevolucion;
+    private Date fechaDevolucion;
 
     @Column(name = TablaNombre.EstadoObjeto)
-    private String EstadoObjeto;
+    private String estadoObjeto;
 
     // Relaciones de mappeo por otras tablas
 

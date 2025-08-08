@@ -13,22 +13,22 @@ public class Vehiculo {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private long Id;
+    private long id;
 
     @Column(name = TablaNombre.Descripcion)
-    private String Descripcion;
+    private String descripcion;
 
     @Column(name = TablaNombre.NoChasis) // Los chasis pueden tener letras :D
-    private String NoChasis;
+    private String noChasis;
 
     @Column(name = TablaNombre.NoMotor)
-    private String NoMotor;
+    private String noMotor;
 
     @Column(name = TablaNombre.NoPlaca)
-    private String NoPlaca;
+    private String noPlaca;
 
     @Column(name = TablaNombre.Color)
-    private String Color;
+    private String color;
 
     // Relaciones de mappeo por otras tablas
 

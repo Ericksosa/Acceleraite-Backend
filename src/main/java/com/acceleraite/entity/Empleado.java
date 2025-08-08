@@ -14,25 +14,25 @@ public class Empleado {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
     @Column(name = TablaNombre.Nombre)
-    private String Nombre;
+    private String nombre;
 
     @Column(name = TablaNombre.Apellido)
-    private String Apellido;
+    private String apellido;
 
     @Column(name = TablaNombre.Cedula)
-    private String Cedula;
+    private String cedula;
 
     @Column(name = TablaNombre.TandaLabor)
-    private String TandaLabor;
+    private String tandaLabor;
 
     @Column(name = TablaNombre.PorcientoComision)
-    private Double PorcientoComision;
+    private Double porcientoComision;
 
     @Column(name = TablaNombre.FechaIngreso)
-    private Date FechaIngreso;
+    private Date fechaIngreso;
 
     // Relaciones de mappeo por otras tablas
     @OneToMany(mappedBy = "empleado", cascade = CascadeType.ALL)

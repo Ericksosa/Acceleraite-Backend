@@ -7,10 +7,10 @@ import java.util.List;
 @Data
 public class MarcaDTO {
 
-    private long Id;
-    private String Nombre;
-    private String Descripcion;
-    private List<Long> ModelosIds;
-    private Long EstadoId;
+    private long id;
+    private String nombre;
+    private String descripcion;
+    private Long estadoId;
+    private String estadoNombre;
 
 }

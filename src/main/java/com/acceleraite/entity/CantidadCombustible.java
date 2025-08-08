@@ -11,13 +11,13 @@ public class CantidadCombustible {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
     @Column(name = TablaNombre.Nombre)
-    private String Nombre;
+    private String nombre;
 
     @Column(name = TablaNombre.Descripcion)
-    private String Descripcion;
+    private String descripcion;
 
     // Relaciones de mappeo por otras tablas
     @OneToOne(mappedBy = "cantidadCombustible", cascade = CascadeType.ALL)

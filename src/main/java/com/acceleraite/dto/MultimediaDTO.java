@@ -6,9 +6,10 @@ import lombok.*;
 @Data
 public class MultimediaDTO {
 
-    private Long Id;
-    private String Tipo;
-    private byte[] Archivo;
-    private Long VehiculoId;
-    private Long EstadoId;
+    private Long id;
+    private String tipo;
+    private byte[] archivo;
+    private Long vehiculoId;
+    private Long estadoId;
+    private String estadoNombre;
 }

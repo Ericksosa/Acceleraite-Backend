@@ -10,10 +10,10 @@ import lombok.*;
 public class Multimedia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
     @Column(name = TablaNombre.Tipo)
-    private String Tipo;
+    private String tipo;
 
     @Lob
     @Column(name = TablaNombre.Archivo)

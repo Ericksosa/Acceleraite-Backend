@@ -13,13 +13,13 @@ public class Opinion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
     @Column(name = TablaNombre.Comentario)
-    private String Comentario;
+    private String comentario;
 
     @Column(name = TablaNombre.Fecha)
-    private Date Fecha;
+    private Date fecha;
 
     // Relaciones de mappeo por otras tablas
 

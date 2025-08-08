@@ -7,7 +7,8 @@ import lombok.*;
 public class MetodoPagoDTO {
 
     private Long id;
-    private String Nombre;
-    private String Descripcion;
-    private Long EstadoId;
+    private String nombre;
+    private String descripcion;
+    private Long estadoId;
+    private String estadoNombre;
 }

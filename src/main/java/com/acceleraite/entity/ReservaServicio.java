@@ -11,12 +11,11 @@ public class ReservaServicio {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
     @Column(name = TablaNombre.Cantidad)
-    private int Cantidad;
+    private int cantidad;
 
-    // Relaciones de mappeo por otras tablas
 
     // Relaciones de toma de atributos de otras tablas
     @ManyToOne

@@ -16,10 +16,10 @@ public class MetodoPago {
     private Long id;
 
     @Column(name = TablaNombre.Nombre)
-    private String Nombre;
+    private String nombre;
 
     @Column(name = TablaNombre.Descripcion)
-    private String Descripcion;
+    private String descripcion;
 
     // Relaciones de mappeo por otras tablas
     @OneToMany(mappedBy = "metodoPago", cascade = CascadeType.ALL)

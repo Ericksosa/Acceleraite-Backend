@@ -8,13 +8,15 @@ import java.util.Date;
 @Data
 public class RentaDTO {
 
-    private Long Id;
-    private String Descripcion;
-    private Date FechaInicio;
-    private Date FechaVencimiento;
-    private Long MillajeInicio;
-    private Long ReservaId;
-    private Long EstadoId;
+    private Long id;
+    private String descripcion;
+    private Date fechaInicio;
+    private Date fechaVencimiento;
+    private Long millajeInicio;
+    private Long reservaId;
+    private Long estadoId;
+    private String estadoNombre;
+    private String reservaNombre;
 
 
 }

@@ -14,22 +14,22 @@ public class Inspeccion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long Id;
+    private Long id;
 
     @Column(name = TablaNombre.TieneRalladuras)
-    private Boolean TieneRalladuras;
+    private Boolean tieneRalladuras;
 
     @Column(name = TablaNombre.TieneGomaRespuesta)
-    private Boolean TieneGomaRespuesta;
+    private Boolean tieneGomaRespuesta;
 
     @Column(name = TablaNombre.TieneGato)
-    private Boolean TieneGato;
+    private Boolean tieneGato;
 
     @Column(name = TablaNombre.TieneRoturaCristal)
-    private Boolean TieneRoturaCristal;
+    private Boolean tieneRoturaCristal;
 
     @Column(name = TablaNombre.Fecha)
-    private Date Fecha;
+    private Date fecha;
 
     // Relaciones de mappeo por otras tablas
     @OneToMany(mappedBy = "inspeccion", cascade = CascadeType.ALL)

@@ -1,8 +1,6 @@
 package com.acceleraite.controller;
 
-import com.acceleraite.dto.EmpleadoDTO;
 import com.acceleraite.dto.MarcaDTO;
-import com.acceleraite.service.EmpleadoService;
 import com.acceleraite.service.MarcaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,12 +12,14 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/marcas")
 public class MarcaController {
+
     @Autowired
     private MarcaService marcaService;
     @Autowired
     public MarcaController(MarcaService marcaService) {
         this.marcaService = marcaService;
     }
+
     @GetMapping
     public ResponseEntity<List<MarcaDTO>> getAllMarcas() {
             List<MarcaDTO> marcas = marcaService.getAllMarcas();

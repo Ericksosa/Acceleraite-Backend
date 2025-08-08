@@ -11,6 +11,7 @@ public class TipoCombustibleMapper {
         dto.setNombre(tipoCombustible.getNombre());
         dto.setDescripcion(tipoCombustible.getDescripcion());
         dto.setEstadoId(tipoCombustible.getEstado() != null ? tipoCombustible.getEstado().getId() : null);
+        dto.setEstadoNombre(tipoCombustible.getEstado().getNombre());
         return dto;
     }
     public static TipoCombustible toEntity(TipoCombustibleDTO dto){

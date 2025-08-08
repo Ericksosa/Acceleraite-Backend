@@ -20,4 +20,6 @@ public interface UsuarioService {
     //Delete
     void deleteUsuario(Long UsuarioId, Long nuevoEstadoId);
 
+    UsuarioDTO login(String correo, String password);
+
 }

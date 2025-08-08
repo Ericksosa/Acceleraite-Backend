@@ -7,15 +7,14 @@ import java.util.List;
 @Data
 public class ClienteDTO {
 
-    private Long Id;
-    private String Nombre;
-    private String Apellido;
-    private Long TarjetaCR;
-    private Double LimiteCredito;
-    private String TipoPersona;
-    private List<Long> CalificacionesIds;
-    private List<Long> OpinionesIds;
-    private Long UsuarioId;
-    private Long EstadoId;
+    private Long id;
+    private String nombre;
+    private String apellido;
+    private Long tarjetaCR;
+    private Double limiteCredito;
+    private String tipoPersona;
+    private Long usuarioId;
+    private Long estadoId;
+    private String estadoNombre;
 
 }

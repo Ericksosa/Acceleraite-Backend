@@ -11,19 +11,19 @@ public class Penalizacion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
     @Column(name = TablaNombre.Nombre)
-    private String Nombre;
+    private String nombre;
 
     @Column(name = TablaNombre.Tipo)
-    private String Tipo;
+    private String tipo;
 
     @Column(name = TablaNombre.MontoTotal)
-    private String MontoTotal;
+    private String montoTotal;
 
     @Column(name = TablaNombre.Descripcion)
-    private String Descripcion;
+    private String descripcion;
 
     // Relaciones de mappeo por otras tablas
 

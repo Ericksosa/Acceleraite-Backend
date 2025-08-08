@@ -6,9 +6,9 @@ import lombok.*;
 @Data
 public class ReservaServicioDTO {
 
-    private Long Id;
-    private int Cantidad;
-    private Long ReservaId;
-    private Long ServicioId;
+    private Long id;
+    private int cantidad;
+    private Long reservaId;
+    private Long servicioId;
 
 }

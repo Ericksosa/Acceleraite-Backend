@@ -16,16 +16,16 @@ public class Rol {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
     @Column(name = TablaNombre.Nombre, nullable = false)
-    private String Nombre;
+    private String nombre;
 
     @Column(name = TablaNombre.FechaRegistro, nullable = false) // Posible cambio a Tipo DATE
-    private LocalDateTime FechaRegistro;
+    private LocalDateTime fechaRegistro;
 
     @Column(name = TablaNombre.Descripcion, nullable = true)
-    private String Descripcion;
+    private String descripcion;
 
     // Relacion
     @JsonIgnore

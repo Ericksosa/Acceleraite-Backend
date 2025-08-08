@@ -9,23 +9,26 @@ import java.util.List;
 @Data
 public class ReservaDTO {
 
-    private Long Id;
-    private Date FechaCreacion;
-    private Date FechaInicio;
-    private double Monto_X_Dia;
-    private double CantidadDia;
-    private String Comentario;
-    private double MontoTotal;
+    private Long id;
+    private Date fechaCreacion;
+    private Date fechaInicio;
+    private double monto_X_Dia;
+    private double cantidadDia;
+    private String comentario;
+    private double montoTotal;
     private List<Long> PagoIds;
-    private Long InspeccionId;
-    private Long DevolucionId;
-    private List<Long> RentasIds;
-    private Long EmpleadoId;
-    private Long VehiculoId;
-    private Long EstadoId;
-    private Long UsuarioId;
-    private Long PenalizacionId;
+    private Long inspeccionId;
+    private Long devolucionId;
+    private List<Long> rentasIds;
+    private Long empleadoId;
+    private Long vehiculoId;
+    private Long estadoId;
+    private Long usuarioId;
+    private Long penalizacionId;
     private List<Long> reservaServiciosIds;
-
+    private String estadoNombre;
+    private String reservaNombre;
+    private String devolucionNombre;
+    private String vehiculoNombre;
 
 }

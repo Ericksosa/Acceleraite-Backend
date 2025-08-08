@@ -13,13 +13,13 @@ public class Calificacion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
     @Column(name = "Puntuacion")
-    private double Puntuacion;
+    private double puntuacion;
 
     @Column(name = TablaNombre.Fecha)
-    private Date Fecha;
+    private Date fecha;
 
     // Relaciones
     @ManyToOne

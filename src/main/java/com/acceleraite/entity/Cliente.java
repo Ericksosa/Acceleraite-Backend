@@ -13,22 +13,22 @@ public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
     @Column(name = TablaNombre.Nombre)
-    private String Nombre;
+    private String nombre;
 
     @Column(name = TablaNombre.Apellido)
-    private String Apellido;
+    private String apellido;
 
     @Column(name = TablaNombre.TarjetaCR)
-    private Long TarjetaCR;
+    private Long tarjetaCR;
 
     @Column(name = TablaNombre.LimiteCredito)
-    private Double LimiteCredito;
+    private Double limiteCredito;
 
     @Column(name = TablaNombre.TipoPersona)
-    private String TipoPersona;
+    private String tipoPersona;
 
     // Relaciones de mappeo por otras tablas
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)

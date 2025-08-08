@@ -8,18 +8,22 @@ import java.util.List;
 @Data
 public class InspeccionDTO {
 
-    private Long Id;
-    private Boolean TieneRalladuras;
-    private Boolean TieneGomaRespuesta;
-    private Boolean TieneGato;
-    private Boolean TieneRoturaCristal;
-    private Date Fecha;
-    private List<Long> PenalizacionesIds;
-    private Long VehiculoId;
-    private Long ReservaId;
-    private Long CantidadCombustibleId;
-    private Long EstadoGomaId;
-    private Long EmpleadoId;
-    private Long EstadoId;
+    private Long id;
+    private Boolean tieneRalladuras;
+    private Boolean tieneGomaRespuesta;
+    private Boolean tieneGato;
+    private Boolean tieneRoturaCristal;
+    private Date fecha;
+    private Long vehiculoId;
+    private Long reservaId;
+    private Long cantidadCombustibleId;
+    private Long estadoGomaId;
+    private Long empleadoId;
+    private Long estadoId;
+    private String estadoNombre;
+    private String vehiculoNombre;
+    private String ownerReservaName;
+    private String empleadoNombre;
+
 
 }

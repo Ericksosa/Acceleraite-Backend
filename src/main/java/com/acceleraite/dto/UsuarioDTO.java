@@ -8,10 +8,14 @@ import java.util.List;
 @Data
 public class UsuarioDTO {
 
-    private Long Id;
-    private String NombreUsuario;
-    private String Correo;
-    private String Password;
-    private Long RolId;
-    private Long EstadoId;
+    private Long id;
+    private String nombreUsuario;
+    private String correo;
+    private String password;
+    private Long rolId;
+    private Long estadoId;
+    private String estadoNombre;
+    private String rolNombre;
+
 }
+

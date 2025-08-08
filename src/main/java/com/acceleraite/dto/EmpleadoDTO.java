@@ -8,15 +8,15 @@ import java.util.List;
 @Data
 public class EmpleadoDTO {
 
-    private Long Id;
-    private String Nombre;
-    private String Apellido;
-    private String Cedula;
-    private String TandaLabor;
-    private Double PorcientoComision;
-    private Date FechaIngreso;
-    private List<Long> ReservasIds;
-    private List<Long> InspeccionIds;
-    private Long UsuarioId;
-    private Long EstadoId;
+    private Long id;
+    private String nombre;
+    private String apellido;
+    private String cedula;
+    private String tandaLabor;
+    private Double porcientoComision;
+    private Date fechaIngreso;
+    private Long usuarioId;
+    private String nombreUsuario;
+    private Long estadoId;
+    private String estadoNombre;
 }
