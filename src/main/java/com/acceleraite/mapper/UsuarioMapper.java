@@ -9,16 +9,25 @@ import com.acceleraite.entity.Usuario;
 
 public class UsuarioMapper {
 
-    public static UsuarioDTO mapToUsuarioDTO(Usuario usuario){
-        UsuarioDTO usuarioDTO = new UsuarioDTO();
-        usuarioDTO.setId(usuario.getId());
-        usuarioDTO.setNombreUsuario(usuario.getNombreUsuario());
-        usuarioDTO.setCorreo(usuario.getCorreo());
-        usuarioDTO.setPassword(usuario.getPassword());
-        usuarioDTO.setEstadoId(usuario.getEstado().getId());
-        usuarioDTO.setRolId(usuario.getRol().getId());
-        return usuarioDTO;
-    }
+        public static UsuarioDTO mapToUsuarioDTO(Usuario usuario) {
+            UsuarioDTO dto = new UsuarioDTO();
+            dto.setId(usuario.getId());
+            dto.setNombreUsuario(usuario.getNombreUsuario());
+            dto.setCorreo(usuario.getCorreo());
+            dto.setPassword(usuario.getPassword());
+
+            if (usuario.getRol() != null) {
+                dto.setRolId(usuario.getRol().getId());
+                dto.setRolNombre(usuario.getRol().getNombre());
+            }
+
+            if (usuario.getEstado() != null) {
+                dto.setEstadoId(usuario.getEstado().getId());
+            }
+
+            return dto;
+        }
+
 
     public static Usuario mapToUsuario(UsuarioDTO usuarioDTO){
         Usuario usuario = new Usuario();

@@ -97,7 +97,7 @@ public class UsuarioServiceImp implements UsuarioService {
     }
     @Override
     public UsuarioDTO login(String correo, String password) {
-        Usuario usuario = usuarioRepository.findByEmailAndPassword(correo, password);
+        Usuario usuario = usuarioRepository.findByCorreoAndPassword(correo, password);
         if (usuario != null) {
             return UsuarioMapper.mapToUsuarioDTO(usuario);
         }

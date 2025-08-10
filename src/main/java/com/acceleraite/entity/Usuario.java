@@ -2,8 +2,7 @@ package com.acceleraite.entity;
 
 import com.acceleraite.util.TablaNombre;
 import jakarta.persistence.*;
-import lombok.*;
-
+import lombok.Data;
 import java.util.List;
 
 @Entity
@@ -13,28 +12,28 @@ public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    @Column(name = "id") // Asegura el mapeo con la columna real
+    private Long id;
 
-    @Column(name = TablaNombre.NombreUsuario)
-    private String NombreUsuario;
+    @Column(name = "nombre_usuario", nullable = false)
+    private String nombreUsuario;
 
-    @Column(name = TablaNombre.Correo)
-    private String Correo;
+    @Column(name = "correo", nullable = false, unique = true)
+    private String correo;
 
-    @Column(name = TablaNombre.Password)
-    private String Password;
+    @Column(name = "password", nullable = false)
+    private String password;
 
-    // Relaciones de mappeo por otras tablas
-    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+    // Relaciones de mapeo por otras tablas
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Reserva> reservas;
 
     // Relaciones de toma de atributos de otras tablas
     @ManyToOne
-    @JoinColumn(name = "RolId", foreignKey = @ForeignKey(name = "usuario_rol_id"), nullable = false)
+    @JoinColumn(name = "rol_id", foreignKey = @ForeignKey(name = "usuario_rol_id"), nullable = false)
     private Rol rol;
 
     @ManyToOne
-    @JoinColumn(name = "EstadoId", foreignKey = @ForeignKey(name = "usuario_estado_id"), nullable = false)
+    @JoinColumn(name = "estado_id", foreignKey = @ForeignKey(name = "usuario_estado_id"), nullable = false)
     private Estado estado;
-
 }

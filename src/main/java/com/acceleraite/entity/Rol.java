@@ -32,9 +32,7 @@ public class Rol {
     @OneToMany(mappedBy = "rol", cascade = CascadeType.ALL)
     private List<Usuario> usuarios = new ArrayList<>();
 
-    // Relacion de toma de atributos
     @ManyToOne
-    @JoinColumn(name = "EstadoId", foreignKey = @ForeignKey(name = "rol_estado_id"))
+    @JoinColumn(name = "estado_id", foreignKey = @ForeignKey(name = "rol_estado_Id"))
     private Estado estado;
-
 }
