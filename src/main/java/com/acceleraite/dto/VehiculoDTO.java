@@ -13,6 +13,7 @@ public class VehiculoDTO {
     private String NoMotor;
     private String NoPlaca;
     private String Color;
+    private Double montoPorDia;
     private List<Long> MultimediaIds;
     private List<Long> CalificacionesIds;
     private List<Long> OpinionesIds;

@@ -13,6 +13,7 @@ public class VehiculoMapper {
         dto.setNoMotor(vehiculo.getNoMotor());
         dto.setNoPlaca(vehiculo.getNoPlaca());
         dto.setColor(vehiculo.getColor());
+        dto.setMontoPorDia(vehiculo.getMontoPorDia());
         dto.setTipoCombustibleId(vehiculo.getTipoCombustible() != null ? vehiculo.getTipoCombustible().getId() : null);
         dto.setModeloId(vehiculo.getModelo() != null ? vehiculo.getModelo().getId() : null);
         dto.setTipoVehiculoId(vehiculo.getTipoVehiculo() != null ? vehiculo.getTipoVehiculo().getId() : null);
@@ -27,6 +28,7 @@ public class VehiculoMapper {
         vehiculo.setNoMotor(dto.getNoMotor());
         vehiculo.setNoPlaca(dto.getNoPlaca());
         vehiculo.setColor(dto.getColor());
+        vehiculo.setMontoPorDia(dto.getMontoPorDia());
 
         if (dto.getTipoCombustibleId() != null) {
             TipoCombustible tc = new TipoCombustible();

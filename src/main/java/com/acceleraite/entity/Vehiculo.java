@@ -30,6 +30,9 @@ public class Vehiculo {
     @Column(name = TablaNombre.Color)
     private String Color;
 
+    @Column(name = "MontoPorDia")
+    private Double montoPorDia;
+
     // Relaciones de mappeo por otras tablas
 
     @OneToMany(mappedBy = "vehiculo", cascade = CascadeType.ALL)
