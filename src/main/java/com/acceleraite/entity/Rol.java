@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +23,7 @@ public class Rol {
     private String nombre;
 
     @Column(name = TablaNombre.FechaRegistro, nullable = false) // Posible cambio a Tipo DATE
-    private LocalDateTime fechaRegistro;
+    private LocalDate fechaRegistro;
 
     @Column(name = TablaNombre.Descripcion, nullable = true)
     private String descripcion;

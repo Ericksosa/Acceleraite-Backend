@@ -4,6 +4,7 @@ import com.acceleraite.util.TablaNombre;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -19,7 +20,7 @@ public class Devolucion {
     private String descripcion;
 
     @Column(name = TablaNombre.FechaDevolucion)
-    private Date fechaDevolucion;
+    private LocalDate fechaDevolucion;
 
     @Column(name = TablaNombre.EstadoObjeto)
     private String estadoObjeto;

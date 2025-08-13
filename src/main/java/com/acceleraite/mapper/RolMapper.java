@@ -5,6 +5,7 @@ import com.acceleraite.entity.Estado;
 import com.acceleraite.entity.Rol;
 import com.acceleraite.entity.Usuario;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -32,7 +33,7 @@ public class RolMapper {
         rol.setId(rolDTO.getId());
         rol.setNombre(rolDTO.getNombre());
         rol.setDescripcion(rolDTO.getDescripcion());
-        rol.setFechaRegistro(LocalDateTime.now());
+        rol.setFechaRegistro(LocalDate.now());
         rol.setUsuarios(usuariosRelacionados);
 
         if(rolDTO.getEstadoId() != null){

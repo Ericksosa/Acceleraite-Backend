@@ -2,7 +2,7 @@ package com.acceleraite.dto;
 
 import lombok.*;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 
@@ -11,7 +11,7 @@ public class RolDTO {
 
     private Long id;
     private String nombre;
-    private LocalDateTime fechaRegistro; // Posible cambio a Tipo DATE
+    private LocalDate fechaRegistro;
     private String descripcion;
     private List<Long> usuariosIds;
     private Long estadoId;

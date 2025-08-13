@@ -7,21 +7,21 @@ import java.util.List;
 @Data
 public class VehiculoDTO {
 
-    private long Id;
-    private String Descripcion;
-    private String NoChasis;
-    private String NoMotor;
-    private String NoPlaca;
-    private String Color;
+        private long id;
+    private String descripcion;
+    private String noChasis;
+    private String noMotor;
+    private String noPlaca;
+    private String color;
     private Double montoPorDia;
-    private List<Long> MultimediaIds;
-    private List<Long> CalificacionesIds;
-    private List<Long> OpinionesIds;
-    private List<Long> ReservasIds;
-    private Long InspeccionId;
-    private Long TipoCombustibleId;
-    private Long ModeloId;
-    private Long TipoVehiculoId;
-    private Long EstadoId;
+    private List<Long> multimediaIds;
+    private List<Long> calificacionesIds;
+    private List<Long> opinionesIds;
+    private List<Long> reservasIds;
+    private Long inspeccionId;
+    private Long tipoCombustibleId;
+    private Long modeloId;
+    private Long tipoVehiculoId;
+    private Long estadoId;
 
 }

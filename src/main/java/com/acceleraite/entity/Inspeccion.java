@@ -4,6 +4,7 @@ import com.acceleraite.util.TablaNombre;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -29,7 +30,7 @@ public class Inspeccion {
     private Boolean tieneRoturaCristal;
 
     @Column(name = TablaNombre.Fecha)
-    private Date fecha;
+    private LocalDate fecha;
 
     // Relaciones de mappeo por otras tablas
     @OneToMany(mappedBy = "inspeccion", cascade = CascadeType.ALL)

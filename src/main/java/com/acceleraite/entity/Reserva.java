@@ -4,6 +4,7 @@ import com.acceleraite.util.TablaNombre;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -17,10 +18,10 @@ public class Reserva {
     private Long id;
 
     @Column(name = TablaNombre.FechaCreacion)
-    private Date fechaCreacion;
+    private LocalDate fechaCreacion;
 
     @Column(name = TablaNombre.FechaInicio)
-    private Date fechaInicio;
+    private LocalDate fechaInicio;
 
     @Column(name = TablaNombre.MontoXDia)
     private double monto_X_Dia;

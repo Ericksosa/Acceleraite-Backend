@@ -4,6 +4,7 @@ import com.acceleraite.util.TablaNombre;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -19,10 +20,10 @@ public class Renta {
     private String descripcion;
 
     @Column(name = TablaNombre.FechaInicio)
-    private Date fechaInicio;
+    private LocalDate fechaInicio;
 
     @Column(name = TablaNombre.FechaVencimiento)
-    private Date fechaVencimiento;
+    private LocalDate fechaVencimiento;
 
     @Column(name = TablaNombre.MillajeInicio)
     private Long millajeInicio;

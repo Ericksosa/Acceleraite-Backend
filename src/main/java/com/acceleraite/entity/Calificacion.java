@@ -4,6 +4,7 @@ import com.acceleraite.util.TablaNombre;
 import jakarta.persistence.*;
 import lombok.*;
 
+                import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -19,7 +20,7 @@ public class Calificacion {
     private double puntuacion;
 
     @Column(name = TablaNombre.Fecha)
-    private Date fecha;
+    private LocalDate fecha;
 
     // Relaciones
     @ManyToOne

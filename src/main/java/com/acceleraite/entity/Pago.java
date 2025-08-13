@@ -4,6 +4,7 @@ import com.acceleraite.util.TablaNombre;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -22,14 +23,13 @@ public class Pago {
     private Long noTarjeta;
 
     @Column(name = TablaNombre.FechaVencimientoTarjeta)
-    private Date fechaVencimientoTarjeta;
+    private LocalDate fechaVencimientoTarjeta;
 
     @Column(name = TablaNombre.CVV)
     private int CVV;
 
     @Column(name = TablaNombre.OwnerNombreTarjeta)
     private String ownerNombreTarjeta;
-
 
     // Relaciones de mappeo por otras tablas
 

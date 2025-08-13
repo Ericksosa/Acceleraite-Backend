@@ -2,6 +2,7 @@ package com.acceleraite.dto;
 
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -10,8 +11,8 @@ import java.util.List;
 public class ReservaDTO {
 
     private Long id;
-    private Date fechaCreacion;
-    private Date fechaInicio;
+    private LocalDate fechaCreacion;
+    private LocalDate fechaInicio;
     private double monto_X_Dia;
     private double cantidadDia;
     private String comentario;

@@ -4,6 +4,7 @@ import com.acceleraite.util.TablaNombre;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -36,16 +37,16 @@ public class Vehiculo {
     // Relaciones de mappeo por otras tablas
 
     @OneToMany(mappedBy = "vehiculo", cascade = CascadeType.ALL)
-    private List<Multimedia> multimedia;
+    private List<Multimedia> multimedia = new ArrayList<>();
 
     @OneToMany(mappedBy = "vehiculo", cascade = CascadeType.ALL)
-    private List<Calificacion> calificaciones;
+    private List<Calificacion> calificaciones = new ArrayList<>();
 
     @OneToMany(mappedBy = "vehiculo", cascade = CascadeType.ALL)
-    private List<Opinion> opiniones;
+    private List<Opinion> opiniones = new ArrayList<>();
 
     @OneToMany(mappedBy = "vehiculo", cascade = CascadeType.ALL)
-    private List<Reserva> reservas;
+    private List<Reserva> reservas = new ArrayList<>();
 
     // Relaciones de toma de atributos de otras tablas
     @ManyToOne
