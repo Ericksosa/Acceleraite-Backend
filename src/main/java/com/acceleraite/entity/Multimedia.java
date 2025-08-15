@@ -12,18 +12,24 @@ public class Multimedia {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = TablaNombre.Tipo)
-    private String tipo;
+    @Column(name = "Tipo")
+    private String tipo; // ej. "FOTO_EXTERIOR", "FOTO_INTERIOR"
 
     @Lob
-    @Column(name = TablaNombre.Archivo)
+    @Column(name = "Archivo", columnDefinition = "LONGBLOB", nullable = false)
     private byte[] archivo;
+
+    @Column(name = "ContentType")
+    private String contentType; // image/jpeg, image/png
+
+    @Column(name = "NombreArchivo")
+    private String nombreArchivo;
 
     // Relaciones de mappeo por otras tablas
 
 
     // Relaciones de toma de atributos de otras tablas
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "vehiculoId", foreignKey = @ForeignKey(name = "multimedia_vehiculo_id"))
     private Vehiculo vehiculo;
 

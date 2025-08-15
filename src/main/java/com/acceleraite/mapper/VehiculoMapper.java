@@ -1,8 +1,12 @@
 package com.acceleraite.mapper;
 
 //import com.acceleraite.dto.TipoCombustibleDTO;
+import com.acceleraite.dto.MultimediaDTO;
 import com.acceleraite.dto.VehiculoDTO;
 import com.acceleraite.entity.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import java.util.List;
 
 public class VehiculoMapper {
     public static VehiculoDTO toDTO(Vehiculo vehiculo) {
@@ -18,6 +22,26 @@ public class VehiculoMapper {
         dto.setModeloId(vehiculo.getModelo() != null ? vehiculo.getModelo().getId() : null);
         dto.setTipoVehiculoId(vehiculo.getTipoVehiculo() != null ? vehiculo.getTipoVehiculo().getId() : null);
         dto.setEstadoId(vehiculo.getEstado() != null ? vehiculo.getEstado().getId() : null);
+
+        List<MultimediaDTO> media = vehiculo.getMultimedia().stream().map(m -> {
+            MultimediaDTO mdto = new MultimediaDTO();
+            mdto.setId(m.getId());
+            mdto.setTipo(m.getTipo());
+            mdto.setContentType(m.getContentType());
+            mdto.setNombreArchivo(m.getNombreArchivo());
+            mdto.setNombreArchivo(m.getNombreArchivo());
+            String urlPrincipal = vehiculo.getMultimedia().isEmpty() ? null :
+                    ServletUriComponentsBuilder.fromCurrentContextPath()
+                            .path("/api/multimedia/")
+                            .path(String.valueOf(vehiculo.getMultimedia().get(0).getId()))
+                            .path("/archivo")
+                            .toUriString();
+
+            mdto.setUrl(urlPrincipal);
+            return mdto;
+        }).toList();
+
+        dto.setMultimedia(media);
         return dto;
     }
     public static Vehiculo toEntity(VehiculoDTO dto){

@@ -14,6 +14,7 @@ public class ModeloMapper {
         dto.setDescripcion(modelo.getDescripcion());
         dto.setMarcaId(modelo.getMarca() != null ? modelo.getMarca().getId() : null);
         dto.setEstadoId(modelo.getEstado() != null ? modelo.getEstado().getId() : null);
+        dto.setMarcaNombre(modelo.getMarca() != null ? modelo.getMarca().getNombre() : null);
         return dto;
     }
     public static Modelo toEntity(ModeloDTO dto){

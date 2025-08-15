@@ -1,8 +1,11 @@
 package com.acceleraite.service;
 
 //import com.acceleraite.dto.EmpleadoDTO;
+import com.acceleraite.dto.MultimediaDTO;
 import com.acceleraite.dto.VehiculoDTO;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 
 public interface VehiculoService {
@@ -17,4 +20,9 @@ public interface VehiculoService {
     VehiculoDTO updateVehiculoById(Long Id, VehiculoDTO updateVehiculo);
     //Delete
     void deleteVehiculo(Long vehiculoId, Long statusID);
+
+    List<MultimediaDTO> agregarMultimedia(Long vehiculoId, List<MultipartFile> files, String tipo) throws IOException;
+
+    List<VehiculoDTO> obtenerVehiculosConImagenes();
 }
+

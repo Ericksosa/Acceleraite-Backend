@@ -7,4 +7,7 @@ import java.util.List;
 public interface EstadoService {
 
     List<EstadoDTO> getAllEstados();
+
+    EstadoDTO getEstadoById(Long id);
+
 }

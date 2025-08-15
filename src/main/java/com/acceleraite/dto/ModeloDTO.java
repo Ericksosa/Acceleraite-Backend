@@ -12,5 +12,4 @@ public class ModeloDTO {
     private Long estadoId;
     private String estadoNombre;
     private String marcaNombre;
-
 }

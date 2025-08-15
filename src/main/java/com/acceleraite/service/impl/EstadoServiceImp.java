@@ -3,6 +3,7 @@ package com.acceleraite.service.impl;
 
 import com.acceleraite.dto.EstadoDTO;
 import com.acceleraite.entity.Estado;
+import com.acceleraite.exception.ResourceNotFoundException;
 import com.acceleraite.mapper.EstadoMapper;
 import com.acceleraite.repository.EstadoRepository;
 import com.acceleraite.service.EstadoService;
@@ -28,4 +29,13 @@ public class EstadoServiceImp implements EstadoService {
                 .map(EstadoMapper::toEstadoDTO)
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public EstadoDTO getEstadoById(Long id) {
+        Estado entidad = estadoRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException(
+                        "Estado no encontrado con id: " + id));
+        return EstadoMapper.toEstadoDTO(entidad);
+    }
+
 }
